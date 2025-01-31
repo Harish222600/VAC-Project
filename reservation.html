@@ -21,18 +21,37 @@
   </header>
   <section class="reservation">
     <h2>Book Your Event</h2>
-    <form action="#" method="post">
+    <form action="/api/reservation" method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
+  
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+  
+      <label for="eventType">Event Type:</label>
+      <select id="eventType" name="eventType" required>
+        <option value="wedding">Wedding</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="birthday">Birthday Party</option>
+        <option value="other">Other</option>
+      </select>
+  
       <label for="date">Event Date:</label>
       <input type="date" id="date" name="date" required>
-      <label for="message">Message:</label>
+  
+      <label for="guestCount">Number of Guests:</label>
+      <input type="number" id="guestCount" name="guestCount" min="1" required>
+  
+      <label for="message">Additional Details:</label>
       <textarea id="message" name="message" rows="4"></textarea>
+  
       <button type="submit">Submit</button>
     </form>
   </section>
+  
   <footer>
     <p>&copy; 2023 Hall Name. All rights reserved.</p>
   </footer>
