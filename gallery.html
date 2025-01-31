@@ -3,35 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <title>Gallery - The Grand Ballroom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">Hall Name</div>
+      <div class="logo">The Grand Ballroom</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="reservation.html">Reservation</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
       </ul>
     </nav>
   </header>
+
   <section class="gallery">
-    <h2>Gallery</h2>
+    
+
     <div class="image-grid">
-      <img src="image1.jpg" alt="Hall Image 1">
-      <img src="image2.jpg" alt="Hall Image 2">
-      <img src="image3.jpg" alt="Hall Image 3">
-      <img src="image4.jpg" alt="Hall Image 4">
-      <img src="image5.jpg" alt="Hall Image 5">
-      <img src="image6.jpg" alt="Hall Image 6">
+      <div class="image-card wedding" data-category="wedding">
+        <img src="assert/img/EM.png" alt="Wedding Celebration">
+        <div class="image-overlay">
+          <div class="overlay-content">
+            <h3>Elegant Wedding</h3>
+            <p>Classic white theme with floral arrangements</p>
+            <button class="view-btn">View Full Set <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card corporate" data-category="corporate">
+        <img src="assert/img/CC.png" alt="Conference Setup">
+        <div class="image-overlay">
+          <div class="overlay-content">
+            <h3>Corporate Conference</h3>
+            <p>Professional AV setup for 300+ attendees</p>
+            <button class="view-btn">View Full Set <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card party" data-category="party">
+        <img src="assert/img/BP.png" alt="Birthday Party">
+        <div class="image-overlay">
+          <div class="overlay-content">
+            <h3>Birthday Celebration</h3>
+            <p>Vibrant theme party with custom decorations</p>
+            <button class="view-btn">View Full Set <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-section">
+      <h3>Virtual Tour</h3>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/embed-code" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="testimonial-carousel">
+      <h3>Client Experiences</h3>
+      <div class="carousel-inner">
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P1.png')"></div>
+          <p>"The perfect venue for our dream wedding! The gallery doesn't even do justice to the actual beauty."</p>
+          <h4>- Sarah Johnson</h4>
+        </div>
+    
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P2.png')"></div>
+          <p>"We hosted our annual corporate conference here, and the service was impeccable. Everything went smoothly."</p>
+          <h4>- Michael Roberts</h4>
+        </div>
+    
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P3.png')"></div>
+          <p>"I celebrated my 40th birthday at The Grand Ballroom, and it was magical. Every detail was perfect."</p>
+          <h4>- Emily Davis</h4>
+        </div>
+    
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P4.png')"></div>
+          <p>"Our charity gala became a night to remember, thanks to the stunning ambiance and top-notch service."</p>
+          <h4>- Jonathan Miller</h4>
+        </div>
+    
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P5.png')"></div>
+          <p>"The Grand Ballroom transformed our engagement party into a fairytale. Highly recommended!"</p>
+          <h4>- Laura & David Smith</h4>
+        </div>
+        <div class="testimonial">
+          <div class="client-photo" style="background-image: url('assert/img/P6.png')"></div>
+          <p>"The Grand Ballroom transformed our engagement party into a fairytale. Highly recommended!"</p>
+          <h4>- Laura & David Smith</h4>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Create Your Memories?</h2>
+      <p>Book a tour of our venue or consult with our event planners</p>
+      <div class="cta-buttons">
+
+        <a href="reservation.html" class="cta-btn">Book Now</a>
+      </div>
     </div>
   </section>
+
   <footer>
-    <p>&copy; 2023 Hall Name. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul >
+        <li><a href="about.html" >About Us</a></li>
+        <li><a href="gallery.html" >Event Portfolio</a></li>
+      </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2023 The Grand Ballroom. All rights reserved.</p>
   </footer>
+
+  <div class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" alt="Enlarged View">
+    <div class="caption-text"></div>
+  </div>
 </body>
 </html>
