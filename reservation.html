@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reservation</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">Hall Name</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reservation.html">Reservation</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SAEC Auditorium</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </header>
-  <section class="reservation">
-    <h2>Book Your Event</h2>
-    <form action="/api/reservation" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-  
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-  
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-  
-      <label for="eventType">Event Type:</label>
-      <select id="eventType" name="eventType" required>
-        <option value="wedding">Wedding</option>
-        <option value="corporate">Corporate Event</option>
-        <option value="birthday">Birthday Party</option>
-        <option value="other">Other</option>
-      </select>
-  
-      <label for="date">Event Date:</label>
-      <input type="date" id="date" name="date" required>
-  
-      <label for="guestCount">Number of Guests:</label>
-      <input type="number" id="guestCount" name="guestCount" min="1" required>
-  
-      <label for="message">Additional Details:</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-  
-      <button type="submit">Submit</button>
-    </form>
+  </header> 
+
+  <section class="reservation py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Book Your Event</h2>
+      <form action="/api/reservation" method="post" class="row g-3">
+
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="eventType" class="form-label">Event Type</label>
+          <select id="eventType" name="eventType" class="form-select" required>
+            <option value="">Choose an option</option>
+            <option value="wedding">Wedding</option>
+            <option value="corporate">Corporate Event</option>
+            <option value="birthday">Birthday Party</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="date" class="form-label">Event Date</label>
+          <input type="date" id="date" name="date" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="guestCount" class="form-label">Number of Guests</label>
+          <input type="number" id="guestCount" name="guestCount" min="1" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+          <label for="message" class="form-label">Additional Details</label>
+          <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+        </div>
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </div>
+      </form>
+    </div>
   </section>
-  
-  <footer>
-    <p>&copy; 2023 Hall Name. All rights reserved.</p>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2023 Hall Name. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

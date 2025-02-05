@@ -7,7 +7,8 @@ const app = express();
 const port = 5000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/hallReservations', {
+const uri = 'mongodb+srv://hariharish2604:HallManagement@hallmanagement.6bq6z.mongodb.net/';
+mongoose.connect( uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -68,5 +69,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port} ,http://localhost:${port}`);
 });
